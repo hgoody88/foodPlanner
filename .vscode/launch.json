@@ -1,0 +1,18 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "pwa-chrome",
+      "request": "launch",
+      "name": "Open meal-adder.component.html",
+      "file": "c:\\Users\\hgoode\\Documents\\dev\\Practice\\foodPlanner\\src\\meal-adder\\meal-adder.component.html"
+    },
+    {
+      "type": "node-terminal",
+      "name": "Run Script: test",
+      "request": "launch",
+      "command": "npm run test",
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+.ngForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  justify-content: space-evenly;
+  max-width: max-content;
+}
+
+.ngForm > div {
+  display: flex;
+  margin: 1rem;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.submit-button {
+  color: aqua;
+}

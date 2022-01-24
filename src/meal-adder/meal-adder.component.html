@@ -1,0 +1,40 @@
+<h2>Add new meal</h2>
+<form
+  (ngSubmit)="onSubmit()"
+  class="ngForm"
+  [formGroup]="addMealForm"
+>
+  <div>
+    <label for="meal-name">Meal name: </label>
+    <input type="text" id="meal-name" formControlName="mealName">
+  </div>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Choose a date</mat-label>
+    <input
+      matInput
+      [matDatepicker]="picker"
+      placeholder="Chose a date"
+      formControlName="date"
+    >
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Meal slot</mat-label>
+    <mat-select formControlName="time">
+      <mat-option *ngFor="let meal of mealOptions" [value]="meal">
+        {{meal}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <button
+    class="submit-button"
+    type="submit"
+    mat-button
+  >
+    Submit
+  </button>
+</form>
