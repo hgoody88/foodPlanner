@@ -2,16 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl } from '@angular/forms';
 import { MealService } from 'src/app/services/meal-service.service';
 import { Meal } from 'src/app/templates/Meal';
-
-enum mealTime {
-  PreBreakfastSnack,
-  Breakfast,
-  PreLunchSnack,
-  Lunch,
-  PreDinnerSnack,
-  Dinner,
-  PostDinnerSnack
-}
+import { mealTime } from 'src/app/templates/mealTimes';
 
 @Component({
   selector: 'app-meal-adder',
@@ -25,7 +16,7 @@ export class MealAdderComponent implements OnInit {
   addMealForm = this.fb.group({
     mealName: "",
     date: new Date(),
-    time: mealTime
+    time: mealTime.PreBreakfastSnack
   })
 
   constructor(

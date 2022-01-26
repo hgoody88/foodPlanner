@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { MEALS } from 'src/assets/meals';
+import { MEALS } from 'src/app/templates/meals';
 import { Meal } from '../templates/Meal';
 
 @Injectable({
